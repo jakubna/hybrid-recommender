@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "8021:27017"
+    networks:
+      - dev_recommender
+
+  mongo-seed:
+    build: ./mongo-seed
+    ports:
+      - "8022:27017"
+    links:
+      - mongodb
+    networks:
+      - dev_recommender
+    depends_on:
+      - mongodb
+
+  webserver:
+    build: .
+    ports:
+      - "8020:8020"
+    links:
+      - mongodb
+    networks:
+      - dev_recommender
+    depends_on:
+      - mongodb
+    environment:
+      DATABASE_NAME: case_repository
+      MODEL_REPOSITORY_SERVER_URL: 108.143.21.46:8080/knowledgeRepository/
+      MODEL_REPOSITORY_SERVER_URL_ITI: https://knowledge.iti.gr/repository
+      MODEL_REPOSITORY_USER: test@user.com
+      MODEL_REPOSITORY_PASSWORD: password
+
+
+networks:
+  dev_recommender:
+    driver: bridge
+

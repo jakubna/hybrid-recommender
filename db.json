@@ -1,0 +1,116 @@
+{
+	"task_type": {"task_type_all": ["classification", "regression", "clustering", "optimisation"]},
+	"data_type": {"data_type_all": ["tabular", "time_series", "image"]},
+	"kpi": {"kpi_all": ["performance", "avg_performance", "priority", "avg_training_time", "complexity"]},
+
+	"performance_metric": {
+		"classification": [
+		"Accuracy",
+		"AUROC",
+		"Gini Index",
+		"F-score",
+		"Logarithmic Loss",
+		"Precision",
+		"Recall",
+		"Specificity",
+		"ROC Curve",
+		"Averaged Accuracy",
+		"Averaged F-score",
+		"Averaged Logarithmic Loss",
+		"Averaged Precision",
+		"Averaged Recall",
+		"Averaged Specificity",
+		"Class RMSE",
+		"Kappa Statistic",
+		"Confusion Matrix"
+		],
+		"regression": [
+			"MAE",
+			"MAPE",
+			"R-Squared",
+			"MSE",
+			"RMSE",
+			"RSS",
+			"Correlation Coefficient"
+		],
+		"clustering": [
+			"Dunn index",
+			"Silhouette score"
+		],
+		"optimisation": [
+			"Computational effort"
+		]
+	},
+
+	"performance_metric2": [
+		"Accuracy",
+		"AUROC",
+		"Gini Index",
+		"F-score",
+		"Logarithmic Loss",
+		"Precision",
+		"Recall",
+		"Specificity",
+		"ROC Curve",
+		"MAE",
+		"MAPE",
+		"R-Squared",
+		"MSE",
+		"RMSE",
+		"RSS",
+		"Correlation Coefficient",
+		"Averaged Accuracy",
+		"Averaged F-score",
+		"Averaged Logarithmic Loss",
+		"Averaged Precision",
+		"Averaged Recall",
+		"Averaged Specificity",
+		"Class RMSE",
+		"Kappa Statistic",
+		"Confusion Matrix"
+	],
+	"strategy": {
+		"tabular_classification": [
+			"k-Nearest Neighbors",
+			"Learning Vector Quantization",
+			"Support Vector Machine",
+			"Decision Tree",
+			"Random Forest",
+			"ANN",
+			"Autoencoder",
+			"XGBoost",
+			"LightGBM",
+			"Gaussian Naive Bayes",
+			"Stochastic Gradient Descent"
+		],
+		"tabular_regression": [
+			"Linear Regression",
+			"Logistic Regression",
+			"Regression Tree",
+			"ANN",
+			"XGBoost",
+			"LightGBM"
+		],
+		"tabular_clustering": [
+			"Hierarchical Clustering",
+			"K-means Clustering"
+		],
+		"tabular_optimisation": [
+			"Constraint Satisfaction",
+			"Stochastic Optimisation"
+		],
+		"time_series_classification": [
+			"Support Vector Machine",
+			"Random Forest",
+			"k-Nearest Neighbors",
+			"ANN"
+		],
+		"time_series_regression": [
+			"ARIMA",
+			"LSTM"
+		],
+		"image_classification": ["CNN"]
+
+
+	}
+}
